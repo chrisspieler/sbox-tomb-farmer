@@ -1,0 +1,414 @@
+{
+  "GameObjects": [
+    {
+      "Id": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
+      "Name": "Human",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 5.5,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "PlayerController",
+          "__enabled": true,
+          "AnimationHelper": "1e4abb96-ff67-42da-b7f5-534c8605d978",
+          "Body": "1e4abb96-ff67-42da-b7f5-534c8605d978",
+          "Eye": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd",
+          "FirstPerson": true,
+          "Gravity": "0,0,800"
+        }
+      ],
+      "Children": [
+        {
+          "Id": "1e4abb96-ff67-42da-b7f5-534c8605d978",
+          "Name": "Body",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": null,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": "1e4abb96-ff67-42da-b7f5-534c8605d978"
+            }
+          ],
+          "Children": [
+            {
+              "Id": "e5ddb7d8-980c-41f2-83b6-741b015a435a",
+              "Name": "Torch",
+              "Position": "32.16363,0,40.61236",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "AdvancedLight",
+                  "__enabled": true,
+                  "BaseColor": "0.87624,0.73439,0.40342,1",
+                  "CastShadows": true,
+                  "ConstantAttenuation": 0,
+                  "FlickerScale": 0.2,
+                  "FlickerSpeed": 5.81,
+                  "LinearAttenuation": 0,
+                  "QuadraticAttenuation": 0.74,
+                  "Radius": 1000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd",
+          "Name": "Eye",
+          "Position": "0,0,72",
+          "Enabled": true
+        },
+        {
+          "Id": "8a3dfa58-d87a-4b62-8270-fa751277feee",
+          "Name": "Main Camera",
+          "Position": "-300,0,100",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "CameraComponent",
+              "__enabled": true,
+              "BackgroundColor": "0,0,0,1",
+              "ClearFlags": "All",
+              "FieldOfView": 60,
+              "IsMainCamera": true,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            }
+          ]
+        },
+        {
+          "Id": "315322cd-0335-4a00-a8f7-21a930cda37e",
+          "Name": "Soundscape",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SoundscapeTrigger",
+              "__enabled": true,
+              "BoxSize": "500,500,500",
+              "Radius": 500,
+              "Soundscape": "sfx/ambient/cave.sndscape",
+              "StayActiveOnExit": true,
+              "Type": "Box"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "1ea82c9d-3c3a-4beb-a7f7-47516f88d5d4",
+      "Name": "Plane",
+      "Scale": "10,10,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "__enabled": true,
+          "Center": "0,0,-0.125",
+          "IsTrigger": false,
+          "Scale": "100,100,0.25",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "9dd4d047-42e4-4e44-b9de-a7139632d164",
+      "Name": "Zombie",
+      "Position": "454.9392,-43.27597,0.0001895721",
+      "Rotation": "0.00000005924022,0.000000000000009961139,0.993886,0.1104165",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        }
+      ],
+      "Children": [
+        {
+          "Id": "a5cf4ce6-160e-493d-8ec9-7a059607f457",
+          "Name": "Model",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551274,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": "default",
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": null,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
+              "LookAtEnabled": true,
+              "Target": "a5cf4ce6-160e-493d-8ec9-7a059607f457"
+            }
+          ],
+          "Children": [
+            {
+              "Id": "cb880e2f-0dd0-465b-8212-d4517aaf7df0",
+              "Name": "Clothing",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "a5cf4ce6-160e-493d-8ec9-7a059607f457",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen/heads/head_zombie_01/models/head_zombie_01.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "110f4f9b-534a-4ee9-9d1d-f78acce25ba4",
+      "Name": "Skellington",
+      "Position": "436.9581,59.02701,0.0002595601",
+      "Rotation": "0.00000005941106,0.00000000000001099103,0.9967522,-0.08053804",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        }
+      ],
+      "Children": [
+        {
+          "Id": "0479878c-9666-4aeb-9082-ca0d94c57db3",
+          "Name": "Model",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551274,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": "default",
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": null,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
+              "LookAtEnabled": true,
+              "Target": "0479878c-9666-4aeb-9082-ca0d94c57db3"
+            }
+          ],
+          "Children": [
+            {
+              "Id": "c784ea7c-d372-4a8f-8b7b-aa27d88f6e9b",
+              "Name": "Clothing",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "0479878c-9666-4aeb-9082-ca0d94c57db3",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen/skin/skeleton/models/skeleton_skin.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "f857576d-f4eb-444a-bc1f-e73c289e1ed6",
+      "Name": "skelton goast",
+      "Position": "415.6846,162.3725,0.0002464102",
+      "Rotation": "0.00000005875243,0.00000000000001129151,0.9857022,-0.1685002",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CharacterController",
+          "__enabled": true,
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        }
+      ],
+      "Children": [
+        {
+          "Id": "27c67e1f-dded-4f90-84f6-a346de7cc4d8",
+          "Name": "Model",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551274,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": "default",
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "CitizenAnimationHelper",
+              "__enabled": true,
+              "BodyWeight": 1,
+              "EyeSource": null,
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
+              "LookAtEnabled": true,
+              "Target": "27c67e1f-dded-4f90-84f6-a346de7cc4d8"
+            }
+          ],
+          "Children": [
+            {
+              "Id": "c1f9e559-039d-4017-8f2f-9f6ad78ab9a7",
+              "Name": "Clothing",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "SkinnedModelRenderer",
+                  "__enabled": true,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": "27c67e1f-dded-4f90-84f6-a346de7cc4d8",
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/dev/primary_white_emissive_trans.vmat",
+                  "Model": "models/citizen/skin/skeleton/models/skeleton_skin.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,0,0,0.02"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "main_test",
+  "Description": "",
+  "__references": [
+    "facepunch.floor_dirt_b"
+  ]
+}
