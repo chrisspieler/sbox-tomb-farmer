@@ -39,6 +39,7 @@ public class PlayerController : Component, INetworkSerializable
 		if ( !IsProxy )
 		{
 			EyeAngles.pitch += Input.MouseDelta.y * 0.1f;
+			EyeAngles.pitch = EyeAngles.pitch.Clamp( -89, 89 );
 			EyeAngles.yaw -= Input.MouseDelta.x * 0.1f;
 			EyeAngles.roll = 0;
 
