@@ -19,6 +19,7 @@
     {
       "Id": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
       "Name": "Human",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
@@ -45,6 +46,7 @@
         {
           "Id": "1e4abb96-ff67-42da-b7f5-534c8605d978",
           "Name": "Body",
+          "Tags": "player",
           "Enabled": true,
           "Components": [
             {
@@ -78,22 +80,52 @@
           ],
           "Children": [
             {
-              "Id": "e5ddb7d8-980c-41f2-83b6-741b015a435a",
-              "Name": "Torch",
-              "Position": "32.16363,0,40.61236",
+              "Id": "f7dba37f-6303-41a8-8b66-d476ec544078",
+              "Name": "Light Position",
+              "Position": "32,0,40",
+              "Tags": "player",
               "Enabled": true,
               "Components": [
                 {
-                  "__type": "AdvancedLight",
+                  "__type": "SpringArm",
                   "__enabled": true,
-                  "BaseColor": "0.87624,0.73439,0.40342,1",
-                  "CastShadows": true,
-                  "ConstantAttenuation": 0,
-                  "FlickerScale": 0.35,
-                  "FlickerSpeed": 5,
-                  "LinearAttenuation": 0,
-                  "QuadraticAttenuation": 0.74,
-                  "Radius": 1000
+                  "DesiredPosition": "32,0,40",
+                  "LerpSpeed": 10,
+                  "TraceRadius": 15,
+                  "TraceSource": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd"
+                }
+              ],
+              "Children": [
+                {
+                  "Id": "e5ddb7d8-980c-41f2-83b6-741b015a435a",
+                  "Name": "Torch",
+                  "Position": "0,0,0",
+                  "Tags": "player",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "AdvancedLight",
+                      "__enabled": true,
+                      "BaseColor": "0.87624,0.73439,0.40342,1",
+                      "CastShadows": true,
+                      "ConstantAttenuation": 0,
+                      "FlickerScale": 0.35,
+                      "FlickerSpeed": 5,
+                      "LinearAttenuation": 0,
+                      "QuadraticAttenuation": 0.74,
+                      "Radius": 1000
+                    },
+                    {
+                      "__type": "PositionJitter",
+                      "__enabled": true,
+                      "XFactor": 2,
+                      "XSpeed": 50,
+                      "YFactor": 2,
+                      "YSpeed": 50,
+                      "ZFactor": 2,
+                      "ZSpeed": 50
+                    }
+                  ]
                 }
               ]
             }
@@ -103,12 +135,14 @@
           "Id": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd",
           "Name": "Eye",
           "Position": "0,0,72",
+          "Tags": "player",
           "Enabled": true
         },
         {
           "Id": "8a3dfa58-d87a-4b62-8270-fa751277feee",
           "Name": "Main Camera",
           "Position": "-300,0,100",
+          "Tags": "player",
           "Enabled": true,
           "Components": [
             {
@@ -129,257 +163,6 @@
               "ZNear": 10
             }
           ]
-        }
-      ]
-    },
-    {
-      "Id": "1ea82c9d-3c3a-4beb-a7f7-47516f88d5d4",
-      "Name": "Plane",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "03c1eb44-46ca-494d-895d-95757a8d8912",
-      "Name": "Plane (1)",
-      "Position": "640,0,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "01da9bf3-8b67-44c2-9d4b-b6c238a5549d",
-      "Name": "Plane (2)",
-      "Position": "640,640,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "3da2b233-93c2-4ad9-ae82-55c576d0a8e5",
-      "Name": "Plane (3)",
-      "Position": "0,640,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "ac268eca-845d-49a9-9d6a-2955a5619c8d",
-      "Name": "Plane (4)",
-      "Position": "-640,640,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "1023e88c-dc40-458f-829a-1961c62f885a",
-      "Name": "Plane (5)",
-      "Position": "-640,-0,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "290b42a2-282d-4e76-8198-4fe20f301f6c",
-      "Name": "Plane (6)",
-      "Position": "-640,-640,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "49a992d6-ca22-4700-8322-e7e90114f1d6",
-      "Name": "Plane (7)",
-      "Position": "0,-640,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "857d73f4-db3a-452b-a89e-22372698caec",
-      "Name": "Plane (8)",
-      "Position": "640,-640,0",
-      "Scale": "6.4,6.4,1",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
-          "Model": "models/dev/plane.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "BoxCollider",
-          "__enabled": true,
-          "Center": "0,0,-0.125",
-          "IsTrigger": false,
-          "Scale": "100,100,0.25",
-          "Static": false,
-          "Surface": null
         }
       ]
     },
@@ -435,6 +218,16 @@
               "LookAt": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
               "LookAtEnabled": true,
               "Target": "a5cf4ce6-160e-493d-8ec9-7a059607f457"
+            },
+            {
+              "__type": "CapsuleCollider",
+              "__enabled": true,
+              "End": "0,0,72",
+              "IsTrigger": false,
+              "Radius": 15,
+              "Start": "0,0,0",
+              "Static": false,
+              "Surface": null
             }
           ],
           "Children": [
@@ -514,6 +307,16 @@
               "LookAt": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
               "LookAtEnabled": true,
               "Target": "0479878c-9666-4aeb-9082-ca0d94c57db3"
+            },
+            {
+              "__type": "CapsuleCollider",
+              "__enabled": true,
+              "End": "0,0,72",
+              "IsTrigger": false,
+              "Radius": 15,
+              "Start": "0,0,0",
+              "Static": false,
+              "Surface": null
             }
           ],
           "Children": [
@@ -593,6 +396,16 @@
               "LookAt": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
               "LookAtEnabled": true,
               "Target": "27c67e1f-dded-4f90-84f6-a346de7cc4d8"
+            },
+            {
+              "__type": "CapsuleCollider",
+              "__enabled": true,
+              "End": "0,0,72",
+              "IsTrigger": false,
+              "Radius": 15,
+              "Start": "0,0,0",
+              "Static": false,
+              "Surface": null
             }
           ],
           "Children": [
@@ -615,6 +428,903 @@
                   "Tint": "1,0,0,0.02"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "ecfcbe9a-24df-456b-b6c1-a798a922f2d0",
+      "Name": "Floors",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "857d73f4-db3a-452b-a89e-22372698caec",
+          "Name": "Plane (8)",
+          "Position": "640,-640,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "49a992d6-ca22-4700-8322-e7e90114f1d6",
+          "Name": "Plane (7)",
+          "Position": "0,-640,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "290b42a2-282d-4e76-8198-4fe20f301f6c",
+          "Name": "Plane (6)",
+          "Position": "-640,-640,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "1023e88c-dc40-458f-829a-1961c62f885a",
+          "Name": "Plane (5)",
+          "Position": "-640,0,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "ac268eca-845d-49a9-9d6a-2955a5619c8d",
+          "Name": "Plane (4)",
+          "Position": "-640,640,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "3da2b233-93c2-4ad9-ae82-55c576d0a8e5",
+          "Name": "Plane (3)",
+          "Position": "0,640,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "01da9bf3-8b67-44c2-9d4b-b6c238a5549d",
+          "Name": "Plane (2)",
+          "Position": "640,640,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "03c1eb44-46ca-494d-895d-95757a8d8912",
+          "Name": "Plane (1)",
+          "Position": "640,0,0",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "1ea82c9d-3c3a-4beb-a7f7-47516f88d5d4",
+          "Name": "Plane",
+          "Scale": "6.4,6.4,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/floor_dirt_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "c1c8a40c-29a4-4353-8411-a9ac2fe99d3c",
+      "Name": "Walls",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "2134e20b-20ea-41c2-b7d8-79772f4186e8",
+          "Name": "wall_300x300 (5)",
+          "Position": "-384,512,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "e4b436e3-c089-44c7-9637-cf647c1363c1",
+          "Name": "wall_300x300 (15)",
+          "Position": "-384,-768,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "7ec1a848-9d34-44a9-8edd-9986814dd061",
+          "Name": "wall_300x300 (15)",
+          "Position": "-640,-768,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "8c30a834-c89e-4bba-83bf-ba315f930e3f",
+          "Name": "wall_300x300 (15)",
+          "Position": "-896,-768,-0.00003088481",
+          "Rotation": "-0.00000004537254,-0.000000003818512,-0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "bc699b0d-3104-4bfb-ae11-651352dc622c",
+          "Name": "wall_300x300 (15)",
+          "Position": "-896,-512,-0.00003088481",
+          "Rotation": "-0.00000004537254,-0.000000003818512,-0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "70f6e7f1-4d27-4149-b937-b253af9ec538",
+          "Name": "wall_300x300 (15)",
+          "Position": "-896,-256,-0.00003088481",
+          "Rotation": "-0.00000004537254,-0.000000003818512,-0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "2e8172c5-8418-4a00-9461-9aea81355ce3",
+          "Name": "wall_300x300 (15)",
+          "Position": "-896,0,-0.00003088481",
+          "Rotation": "-0.00000004537254,-0.000000003818512,-0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "3a2cdf34-edf1-495a-8c90-f2a1d8bfce38",
+          "Name": "wall_300x300 (15)",
+          "Position": "-896,256,-0.00003088481",
+          "Rotation": "-0.00000004537254,-0.000000003818512,-0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "0cd59385-14c5-497f-8a1f-3fa554217f91",
+          "Name": "wall_300x300 (15)",
+          "Position": "-896,512,-0.00003088481",
+          "Rotation": "0.00000006458561,0.0000000004350704,1,-0.0000006397578",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "fa55140b-6ba7-4b17-b1cf-e8013439e712",
+          "Name": "wall_300x300 (4)",
+          "Position": "-384,512,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "dfa353ee-7ad3-467b-8953-f7816107a8a8",
+          "Name": "wall_300x300 (14)",
+          "Position": "-128,-768,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "fa980f30-1b54-496d-a685-e4ef67d5e25f",
+          "Name": "wall_300x300 (3)",
+          "Position": "-128,512,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "5660fb23-c58a-4a90-969f-42b5e9080b87",
+          "Name": "wall_300x300 (13)",
+          "Position": "128,-768,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "13ee843e-b3c5-426e-bf40-ef8a11d287f8",
+          "Name": "wall_300x300 (2)",
+          "Position": "128,512,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "ae5e4264-8685-4e67-a8ab-b322863697cf",
+          "Name": "wall_300x300 (10)",
+          "Position": "640,-512,-0.00007494091",
+          "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "8f800ebd-e6bf-4658-9e87-110ff963265d",
+          "Name": "wall_300x300 (9)",
+          "Position": "640,-256,-0.00006132534",
+          "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "80b735e5-1db5-4450-b49d-0a861704b6ec",
+          "Name": "wall_300x300 (8)",
+          "Position": "640,0,-0.00004775909",
+          "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "2f97cf81-fec9-4717-9cb9-fb438e2de652",
+          "Name": "wall_300x300 (7)",
+          "Position": "640,256,-0.00003413251",
+          "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "acf2e13e-6405-465d-bb77-2c9b4bbadfa1",
+          "Name": "wall_300x300 (6)",
+          "Position": "640,512,-0.00001174322",
+          "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "256ea184-704f-417a-9b8e-5696515faadd",
+          "Name": "wall_300x300 (12)",
+          "Position": "640,-768,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "02391e76-0c62-4019-b3e6-f35cf5d0ba51",
+          "Name": "wall_300x300 (11)",
+          "Position": "640,512,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "8110c931-e115-4be0-ae57-c43a20ca26c1",
+          "Name": "wall_300x300 (16)",
+          "Position": "384,-768,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "d824cfc7-96af-4be3-83b1-a4bf45487a34",
+          "Name": "wall_300x300 (1)",
+          "Position": "384,512,-0.00001497382",
+          "Scale": "2.125,1,2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__enabled": true,
+              "IsTrigger": false,
+              "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
+              "Static": false,
+              "Surface": null
             }
           ]
         }
@@ -992,443 +1702,6 @@
           "__enabled": true,
           "IsTrigger": false,
           "Model": "models/rust_props/rubble_piles/brick_pile_6x6.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "d824cfc7-96af-4be3-83b1-a4bf45487a34",
-      "Name": "wall_300x300 (1)",
-      "Position": "384,512,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "8110c931-e115-4be0-ae57-c43a20ca26c1",
-      "Name": "wall_300x300 (16)",
-      "Position": "384,-768,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "02391e76-0c62-4019-b3e6-f35cf5d0ba51",
-      "Name": "wall_300x300 (11)",
-      "Position": "640,512,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "256ea184-704f-417a-9b8e-5696515faadd",
-      "Name": "wall_300x300 (12)",
-      "Position": "640,-768,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "acf2e13e-6405-465d-bb77-2c9b4bbadfa1",
-      "Name": "wall_300x300 (6)",
-      "Position": "640,512,-0.00001174322",
-      "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "2f97cf81-fec9-4717-9cb9-fb438e2de652",
-      "Name": "wall_300x300 (7)",
-      "Position": "640,256,-0.00003413251",
-      "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "80b735e5-1db5-4450-b49d-0a861704b6ec",
-      "Name": "wall_300x300 (8)",
-      "Position": "640,0,-0.00004775909",
-      "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "8f800ebd-e6bf-4658-9e87-110ff963265d",
-      "Name": "wall_300x300 (9)",
-      "Position": "640,-256,-0.00006132534",
-      "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "ae5e4264-8685-4e67-a8ab-b322863697cf",
-      "Name": "wall_300x300 (10)",
-      "Position": "640,-512,-0.00007494091",
-      "Rotation": "0.000000004077108,-0.00000004555415,0.707107,0.7071065",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "13ee843e-b3c5-426e-bf40-ef8a11d287f8",
-      "Name": "wall_300x300 (2)",
-      "Position": "128,512,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "5660fb23-c58a-4a90-969f-42b5e9080b87",
-      "Name": "wall_300x300 (13)",
-      "Position": "128,-768,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "fa980f30-1b54-496d-a685-e4ef67d5e25f",
-      "Name": "wall_300x300 (3)",
-      "Position": "-128,512,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "dfa353ee-7ad3-467b-8953-f7816107a8a8",
-      "Name": "wall_300x300 (14)",
-      "Position": "-128,-768,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "fa55140b-6ba7-4b17-b1cf-e8013439e712",
-      "Name": "wall_300x300 (4)",
-      "Position": "-384,512,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "e4b436e3-c089-44c7-9637-cf647c1363c1",
-      "Name": "wall_300x300 (15)",
-      "Position": "-384,-768,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "Static": false,
-          "Surface": null
-        }
-      ]
-    },
-    {
-      "Id": "2134e20b-20ea-41c2-b7d8-79772f4186e8",
-      "Name": "wall_300x300 (5)",
-      "Position": "-384,512,-0.00001497382",
-      "Scale": "2.125,1,2",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/rust_structures/fences_walls/wall_300x300.vmdl",
           "Static": false,
           "Surface": null
         }

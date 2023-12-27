@@ -1,6 +1,11 @@
 {
   "MasterVolume": "1.00,1.00,0",
-  "LoopedSounds": [],
+  "LoopedSounds": [
+    {
+      "SoundFile": "sounds/ambience/cave-loop.vsnd",
+      "Volume": "1.00,1.00,0"
+    }
+  ],
   "StingSounds": [],
   "__references": []
 }
