@@ -150,7 +150,20 @@
           "Name": "Eye",
           "Position": "0,0,72",
           "Tags": "player",
-          "Enabled": true
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "HeadBob",
+              "__enabled": true,
+              "BobAmplitude": 5,
+              "BobSpeed": 8,
+              "Controller": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
+              "CurrentYBob": 0,
+              "CurrentZBob": 0,
+              "InitialPosition": "0,0,0",
+              "Target": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd"
+            }
+          ]
         },
         {
           "Id": "8a3dfa58-d87a-4b62-8270-fa751277feee",

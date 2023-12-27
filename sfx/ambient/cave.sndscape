@@ -3,7 +3,7 @@
   "LoopedSounds": [
     {
       "SoundFile": "sounds/ambience/cave-loop.vsnd",
-      "Volume": "1.00,1.00,0"
+      "Volume": "0.10,0.10,0"
     }
   ],
   "StingSounds": [],
