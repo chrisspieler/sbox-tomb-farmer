@@ -93,6 +93,20 @@
                   "LerpSpeed": 10,
                   "TraceRadius": 15,
                   "TraceSource": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd"
+                },
+                {
+                  "__type": "SoundPointComponent",
+                  "__enabled": true,
+                  "Force2d": false,
+                  "MaxRepeatTime": 1,
+                  "MinRepeatTime": 1,
+                  "Pitch": 1,
+                  "PlayOnStart": true,
+                  "Repeat": false,
+                  "SoundEvent": "sfx/torch/fire_loop.sound",
+                  "SoundOverride": false,
+                  "StopOnNew": false,
+                  "Volume": 1
                 }
               ],
               "Children": [
