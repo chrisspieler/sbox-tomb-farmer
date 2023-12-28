@@ -1,8 +1,6 @@
 using Sandbox;
 using Sandbox.Citizen;
-using System.Drawing;
 using System.Linq;
-using System.Runtime;
 
 public class PlayerController : Component, INetworkSerializable
 {
@@ -173,7 +171,7 @@ public class PlayerController : Component, INetworkSerializable
 
 		if ( !WishVelocity.IsNearZeroLength ) WishVelocity = WishVelocity.Normal;
 
-		if ( Input.Down( "Run" ) ) WishVelocity *= 320.0f;
+		if ( Input.Down( "Run" ) ) WishVelocity *= 240.0f;
 		else WishVelocity *= 110.0f;
 	}
 

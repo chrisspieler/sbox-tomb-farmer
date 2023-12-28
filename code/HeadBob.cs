@@ -22,8 +22,11 @@ public sealed class HeadBob : Component
 			return;
 
 		var velocityFactor = Controller.Velocity.Length.LerpInverse( 0f, 200f );
-		CurrentYBob = MathF.Sin( Time.Now * BobSpeed / 2f ) * BobAmplitude;
-		CurrentZBob = MathF.Cos( Time.Now * BobSpeed ) * BobAmplitude;
+		var currentBobSpeed = Controller.Velocity.Length > 150f
+			? BobSpeed * 2f
+			: BobSpeed;
+		CurrentYBob = MathF.Sin( Time.Now * currentBobSpeed / 2f ) * BobAmplitude;
+		CurrentZBob = MathF.Cos( Time.Now * currentBobSpeed ) * BobAmplitude;
 		var bobVector = new Vector3( 0f, CurrentYBob, CurrentZBob );
 		var scaledBob = Vector3.Zero.LerpTo( bobVector, velocityFactor );
 		Target.Transform.LocalPosition = InitialPosition + scaledBob;
