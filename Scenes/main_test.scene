@@ -79,7 +79,8 @@
             },
             {
               "__type": "Footstepper",
-              "__enabled": true
+              "__enabled": true,
+              "FootstepVolumeScale": 1
             }
           ],
           "Children": [
@@ -203,6 +204,7 @@
       "Name": "Zombie",
       "Position": "332.7083,-64.52655,0.0002310054",
       "Rotation": "0.00000005924022,0.000000000000009961139,0.993886,0.1104165",
+      "Tags": "enemy",
       "Enabled": true,
       "Components": [
         {
@@ -211,9 +213,26 @@
           "Acceleration": 10,
           "GroundAngle": 45,
           "Height": 64,
-          "IgnoreLayers": "",
+          "IgnoreLayers": "enemy",
           "Radius": 16,
           "StepHeight": 18
+        },
+        {
+          "__type": "Beeliner",
+          "__enabled": true,
+          "AnimationHelper": "a5cf4ce6-160e-493d-8ec9-7a059607f457",
+          "Body": "a5cf4ce6-160e-493d-8ec9-7a059607f457",
+          "Controller": "9dd4d047-42e4-4e44-b9de-a7139632d164",
+          "Footsteps": "9dd4d047-42e4-4e44-b9de-a7139632d164",
+          "Speed": 57,
+          "StopDistance": 50,
+          "Target": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
+          "ZeroZ": true
+        },
+        {
+          "__type": "Footstepper",
+          "__enabled": true,
+          "FootstepVolumeScale": 0.1
         }
       ],
       "Children": [
@@ -221,6 +240,7 @@
           "Id": "a5cf4ce6-160e-493d-8ec9-7a059607f457",
           "Name": "Model",
           "Position": "0,0,0",
+          "Tags": "enemy",
           "Enabled": true,
           "Components": [
             {
@@ -267,6 +287,7 @@
               "Id": "cb880e2f-0dd0-465b-8212-d4517aaf7df0",
               "Name": "Clothing",
               "Position": "0,0,0",
+              "Tags": "enemy",
               "Enabled": true,
               "Components": [
                 {

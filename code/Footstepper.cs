@@ -2,6 +2,7 @@
 
 public sealed class Footstepper : Component
 {
+	[Property] public float FootstepVolumeScale { get; set; } = 1f;
 	public void DoFoostep()
 	{
 		var tr = Scene.Trace
@@ -10,7 +11,8 @@ public sealed class Footstepper : Component
 			.Run();
 		if ( tr.Hit && tr.GameObject.Components.TryGet( out CustomSurface surface ) )
 		{
-			Sound.Play( surface.LightFootstep, tr.HitPosition );
+			var hSnd = Sound.Play( surface.LightFootstep, tr.HitPosition );
+			hSnd.Volume *= FootstepVolumeScale;
 		}
 	}
 }
