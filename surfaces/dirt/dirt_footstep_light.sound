@@ -1,0 +1,21 @@
+{
+  "UI": false,
+  "Volume": "0.20,0.20,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/physics/footsteps/player/gravel/step_light_01.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_02.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_03.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_04.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_05.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_06.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_07.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_08.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_09.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_10.vsnd",
+    "sounds/physics/footsteps/player/gravel/step_light_11.vsnd"
+  ],
+  "__references": []
+}

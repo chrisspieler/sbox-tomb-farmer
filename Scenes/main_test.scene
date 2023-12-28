@@ -76,6 +76,10 @@
               "LookAt": null,
               "LookAtEnabled": false,
               "Target": "1e4abb96-ff67-42da-b7f5-534c8605d978"
+            },
+            {
+              "__type": "Footstepper",
+              "__enabled": true
             }
           ],
           "Children": [
@@ -155,11 +159,12 @@
             {
               "__type": "HeadBob",
               "__enabled": true,
-              "BobAmplitude": 5,
+              "BobAmplitude": 4,
               "BobSpeed": 8,
               "Controller": "7e65e34c-03fe-4ebf-bfeb-4154b47d5aaf",
               "CurrentYBob": 0,
               "CurrentZBob": 0,
+              "Footstep": "1e4abb96-ff67-42da-b7f5-534c8605d978",
               "InitialPosition": "0,0,0",
               "Target": "96a491e7-afa3-4fc4-8724-4dd11ce3ecbd"
             }
@@ -490,6 +495,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -518,6 +529,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -546,6 +563,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -574,6 +597,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -602,6 +631,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -630,6 +665,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -658,6 +699,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -686,6 +733,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         },
@@ -713,6 +766,12 @@
               "Scale": "100,100,0.25",
               "Static": false,
               "Surface": null
+            },
+            {
+              "__type": "CustomSurface",
+              "__enabled": true,
+              "HeavyFootstep": null,
+              "LightFootstep": "surfaces/dirt/dirt_footstep_light.sound"
             }
           ]
         }
