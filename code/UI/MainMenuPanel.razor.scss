@@ -6,6 +6,28 @@ MainMenuPanel {
 	align-items: center;
 	color: white;
 	pointer-events: all;
+	transition: opacity 0.5s;
+	opacity: 1;
+
+	&.disabled {
+		*:not(.fade-black) {
+			opacity: 0;
+		}
+		pointer-events: none;
+	}
+
+	.fade-black {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 1;
+		transition: opacity 2s;
+
+		&:intro {
+            opacity: 0;
+        }
+	}
 
 	.title {
 		position: absolute;

@@ -18,6 +18,9 @@
         {
           "__type": "MainMenuPanel",
           "__enabled": true,
+          "Camera": "b181c8c4-5b0f-4653-b7ec-215279e0f232",
+          "GameScene": "scenes/main_test.scene",
+          "GameStarted": false,
           "GameTitle": "Dead Wringer"
         }
       ]
@@ -1003,7 +1006,7 @@
     {
       "Id": "b0357765-804f-43e1-89e3-5187e82f9b80",
       "Name": "brick_pile_6x6",
-      "Position": "316.4543,-165.0333,-0.00002452899",
+      "Position": "273.316,-248.1412,-0.00002452899",
       "Rotation": "-0.00000004918416,-0.000000000000001318541,-0.8251731,0.5648809",
       "Enabled": true,
       "Components": [
@@ -1085,7 +1088,7 @@
     {
       "Id": "1754a0e5-5946-4ef7-9eaa-a49c8d4d4214",
       "Name": "dirt_pile_01",
-      "Position": "280,32,-0.00001964578",
+      "Position": "424.7662,91.73099,-0.00001462929",
       "Rotation": "-0.00000001767785,0.00000000000000008530574,-0.2965851,0.9550064",
       "Enabled": true,
       "Components": [
@@ -1188,7 +1191,7 @@
     {
       "Id": "89f84057-cb99-436b-8b09-17a95cc471d0",
       "Name": "Wall",
-      "Position": "352,-176.3002,180.3584",
+      "Position": "352,-176,176",
       "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1208,7 +1211,7 @@
     {
       "Id": "e6dcfd01-9ceb-4f75-9cc0-78d91f9fe91a",
       "Name": "Wall (5)",
-      "Position": "736,-176.3002,224",
+      "Position": "752,-176,176",
       "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1228,7 +1231,7 @@
     {
       "Id": "788c2018-8f94-491e-b62e-7e66a75cb114",
       "Name": "Wall (6)",
-      "Position": "736,-176.3002,608",
+      "Position": "752,-176,576",
       "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
       "Scale": "4,4,1",
       "Enabled": true,

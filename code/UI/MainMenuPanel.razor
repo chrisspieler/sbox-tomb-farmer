@@ -3,9 +3,13 @@
 @inherits PanelComponent
 
 <root>
-	<div class="title">@GameTitle</div>
+    @if ( GameStarted)
+    {
+        <div class="fade-black"></div>
+    }
+    <div class="title">@GameTitle</div>
 	<div id="choices">
-		<div class="choice">New Game</div>
+		<div class="choice" onclick=@(_ => NewGame())>New Game</div>
 		<div class="choice">Options</div>
 		<div class="choice">Quit</div>
 	</div>
@@ -15,9 +19,26 @@
 {
 
     [Property] public string GameTitle { get; set; } = "Dead Wringer";
+    [Property] public GameObject Camera { get; set; }
+    [Property] public bool GameStarted { get; set;}
+    [Property] public SceneFile GameScene { get; set; }
 
     /// <summary>
     /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
     /// </summary>
     protected override int BuildHash() => System.HashCode.Combine( GameTitle );
+
+    private async void NewGame()
+    {
+        if ( GameStarted ) return;
+
+        GameStarted = true;
+        SetClass( "disabled", true );
+        while ( Camera.Transform.Position.x < 600 )
+        {
+            Camera.Transform.Position += new Vector3( 200 * Time.Delta, 0f, 0f);
+            await Task.Frame();
+        }
+        Scene.Load( GameScene );
+    }
 }
