@@ -94,13 +94,13 @@
     {
       "Id": "9379e02b-bc86-4b65-a624-c68c7478abae",
       "Name": "Torch",
-      "Position": "-64,0,96",
+      "Position": "138.5337,0,29.06535",
       "Enabled": true,
       "Children": [
         {
           "Id": "4bdb5a35-b031-4bd5-84b7-e5077bf7d649",
           "Name": "Torch",
-          "Position": "288,0,-32",
+          "Position": "0,0,0",
           "Tags": "player",
           "Enabled": true,
           "Components": [
@@ -975,8 +975,8 @@
     {
       "Id": "f7cbe677-fc86-448b-9707-2925e93422a6",
       "Name": "brick_pile_3x6",
-      "Position": "448,320,-0.000007426865",
-      "Rotation": "-0.0000000433869,-0.00000000000001958977,-0.7279112,0.6856715",
+      "Position": "296,224.3338,-0.000007426865",
+      "Rotation": "-0.0000000401771,-0.00000000000001847792,-0.6740595,0.7386774",
       "Scale": "1,1.293844,1",
       "Enabled": true,
       "Components": [
@@ -1003,7 +1003,7 @@
     {
       "Id": "b0357765-804f-43e1-89e3-5187e82f9b80",
       "Name": "brick_pile_6x6",
-      "Position": "372.3089,-340.7331,-0.00002452899",
+      "Position": "316.4543,-165.0333,-0.00002452899",
       "Rotation": "-0.00000004918416,-0.000000000000001318541,-0.8251731,0.5648809",
       "Enabled": true,
       "Components": [
@@ -1030,7 +1030,7 @@
     {
       "Id": "b9706638-dc06-493f-9b26-57f9ae1110db",
       "Name": "brick_pile_6x6 (1)",
-      "Position": "561.4868,-385.6057,-0.00003897774",
+      "Position": "561.4868,-282.2389,-0.00003897774",
       "Rotation": "-0.00000005565601,-0.00000000000001444589,-0.9337529,-0.3579189",
       "Enabled": true,
       "Components": [
@@ -1085,7 +1085,8 @@
     {
       "Id": "1754a0e5-5946-4ef7-9eaa-a49c8d4d4214",
       "Name": "dirt_pile_01",
-      "Position": "209.5957,-119.6396,0",
+      "Position": "280,32,-0.00001964578",
+      "Rotation": "-0.00000001767785,0.00000000000000008530574,-0.2965851,0.9550064",
       "Enabled": true,
       "Components": [
         {
@@ -1103,91 +1104,91 @@
     {
       "Id": "b37e68d9-110c-44f5-80b2-076863fe17ab",
       "Name": "Pillar",
-      "Position": "384,224,-0.0000007578958",
+      "Position": "384,176,-0.0000007578958",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "f0821f38-38ad-47b5-a74c-bd7fea4bbf65",
       "Name": "Pillar (6)",
-      "Position": "384,224,448",
+      "Position": "384,176,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "04ec7fc7-3cf3-46fa-8704-2fe233113ff8",
       "Name": "Pillar (5)",
-      "Position": "384,-256,-0.0000007578958",
+      "Position": "384,-160,-0.0000007578958",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "b02bb54a-2954-48c6-a034-c65e489155d2",
       "Name": "Pillar (7)",
-      "Position": "384,-256,448",
+      "Position": "384,-160,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "f2012e7f-f584-4599-bf78-ffb62b8399f1",
       "Name": "Pillar (1)",
-      "Position": "608,224,-0.0000007578958",
+      "Position": "608,176,-0.0000007578958",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "d39e133f-82e3-4c8f-8384-e4d8a5231f82",
       "Name": "Pillar (8)",
-      "Position": "608,224,448",
+      "Position": "608,176,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "3b8968ea-1a2f-47dc-9996-c4d1380301f9",
       "Name": "Pillar (4)",
-      "Position": "608,-256,-0.0000007578958",
+      "Position": "608,-160,-0.0000007578958",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "5adf8551-5b83-4456-86e3-bb071063000d",
       "Name": "Pillar (9)",
-      "Position": "608,-256,448",
+      "Position": "608,-160,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "916d43a5-48a2-42e1-b71c-fb3b7928f486",
       "Name": "Pillar (2)",
-      "Position": "832,224,-0.0000007578958",
+      "Position": "832,176,-0.0000007578958",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "9fb9b344-a358-43d9-b3b8-d3d839e33d6d",
       "Name": "Pillar (10)",
-      "Position": "832,224,448",
+      "Position": "832,176,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "7df2e8c2-1404-461d-bee0-dd14f116e3e0",
       "Name": "Pillar (3)",
-      "Position": "832,-256,-0.0000007578958",
+      "Position": "832,-160,-0.0000007578958",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "ad781e5d-cd63-4c7d-872c-1c0e1053ecb0",
       "Name": "Pillar (11)",
-      "Position": "832,-256,448",
+      "Position": "832,-160,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
     },
     {
       "Id": "89f84057-cb99-436b-8b09-17a95cc471d0",
       "Name": "Wall",
-      "Position": "352,-352,256",
+      "Position": "352,-176.3002,180.3584",
       "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1207,7 +1208,7 @@
     {
       "Id": "e6dcfd01-9ceb-4f75-9cc0-78d91f9fe91a",
       "Name": "Wall (5)",
-      "Position": "736,-352,224",
+      "Position": "736,-176.3002,224",
       "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1227,7 +1228,7 @@
     {
       "Id": "788c2018-8f94-491e-b62e-7e66a75cb114",
       "Name": "Wall (6)",
-      "Position": "736,-352,608",
+      "Position": "736,-176.3002,608",
       "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1247,7 +1248,7 @@
     {
       "Id": "ea546f95-3ff7-4be9-b2d5-552c17e3823a",
       "Name": "Wall (1)",
-      "Position": "256,288.0001,192",
+      "Position": "256,192,192",
       "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1267,7 +1268,7 @@
     {
       "Id": "a24683d8-7f9b-4b4e-92d7-af12be2e22e9",
       "Name": "Wall (4)",
-      "Position": "672,256,191.9999",
+      "Position": "656,192,191.9999",
       "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1287,7 +1288,7 @@
     {
       "Id": "326ee638-0ed1-4ff6-9b4b-467824e1f837",
       "Name": "Wall (2)",
-      "Position": "256.0001,288,576",
+      "Position": "256.0001,192,592",
       "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
       "Scale": "4,4,1",
       "Enabled": true,
@@ -1307,7 +1308,7 @@
     {
       "Id": "cbbcb6bf-aea0-4f9c-b067-5a7e4bc995bd",
       "Name": "Wall (3)",
-      "Position": "672,256,575.9999",
+      "Position": "656,192,592",
       "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
       "Scale": "4,4,1",
       "Enabled": true,
