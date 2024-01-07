@@ -66,7 +66,8 @@
           "__enabled": true,
           "HighTint": "0.01176,0.01176,0.01176,1",
           "Sky": "50f1eaed-f8d0-4eec-b78b-3a02a65443b8",
-          "Speed": 3
+          "Speed": 5,
+          "StartDelay": 5
         }
       ]
     },
@@ -93,16 +94,53 @@
     {
       "Id": "9379e02b-bc86-4b65-a624-c68c7478abae",
       "Name": "Torch",
-      "Position": "136,0,32",
+      "Position": "-64,0,96",
       "Enabled": true,
       "Children": [
         {
           "Id": "4bdb5a35-b031-4bd5-84b7-e5077bf7d649",
           "Name": "Torch",
-          "Position": "29.79922,0,0",
+          "Position": "288,0,-32",
           "Tags": "player",
           "Enabled": true,
-          "__Prefab": "prefabs/fx/torch_light.prefab"
+          "Components": [
+            {
+              "__type": "AdvancedLight",
+              "__enabled": true,
+              "BaseColor": "0.87624,0.73439,0.40342,1",
+              "CastShadows": true,
+              "ConstantAttenuation": 0,
+              "FlickerScale": 0.5,
+              "FlickerSpeed": 5,
+              "LinearAttenuation": 0,
+              "QuadraticAttenuation": 1,
+              "Radius": 1000
+            },
+            {
+              "__type": "PositionJitter",
+              "__enabled": true,
+              "XFactor": 2,
+              "XSpeed": 50,
+              "YFactor": 2,
+              "YSpeed": 50,
+              "ZFactor": 2,
+              "ZSpeed": 50
+            },
+            {
+              "__type": "SoundPointComponent",
+              "__enabled": true,
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "Repeat": false,
+              "SoundEvent": "sfx/torch/fire_loop.sound",
+              "SoundOverride": false,
+              "StopOnNew": false,
+              "Volume": 1
+            }
+          ]
         }
       ]
     },
@@ -1145,6 +1183,146 @@
       "Position": "832,-256,448",
       "Enabled": true,
       "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "89f84057-cb99-436b-8b09-17a95cc471d0",
+      "Name": "Wall",
+      "Position": "352,-352,256",
+      "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "e6dcfd01-9ceb-4f75-9cc0-78d91f9fe91a",
+      "Name": "Wall (5)",
+      "Position": "736,-352,224",
+      "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "788c2018-8f94-491e-b62e-7e66a75cb114",
+      "Name": "Wall (6)",
+      "Position": "736,-352,608",
+      "Rotation": "-0.5000003,0.4999997,0.5000007,0.4999993",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "ea546f95-3ff7-4be9-b2d5-552c17e3823a",
+      "Name": "Wall (1)",
+      "Position": "256,288.0001,192",
+      "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "a24683d8-7f9b-4b4e-92d7-af12be2e22e9",
+      "Name": "Wall (4)",
+      "Position": "672,256,191.9999",
+      "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "326ee638-0ed1-4ff6-9b4b-467824e1f837",
+      "Name": "Wall (2)",
+      "Position": "256.0001,288,576",
+      "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "cbbcb6bf-aea0-4f9c-b067-5a7e4bc995bd",
+      "Name": "Wall (3)",
+      "Position": "672,256,575.9999",
+      "Rotation": "0.5000005,0.5000002,-0.4999999,0.4999995",
+      "Scale": "4,4,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/stone/stonewall01.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -1159,6 +1337,7 @@
   "Title": "main_menu",
   "Description": "",
   "__references": [
+    "agentep.stonewall01",
     "dopamine.starmapmilkyway",
     "facepunch.dirtpile_01",
     "facepunch.dirtpile_02",

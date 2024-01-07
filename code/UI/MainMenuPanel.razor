@@ -14,11 +14,10 @@
 @code
 {
 
-	[Property] public string GameTitle { get; set; } = "Dead Wringer";
+    [Property] public string GameTitle { get; set; } = "Dead Wringer";
 
-	/// <summary>
-	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
-	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( GameTitle );
-
+    /// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine( GameTitle );
 }
