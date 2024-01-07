@@ -1,0 +1,51 @@
+{
+  "RootObject": {
+    "Id": "e5ddb7d8-980c-41f2-83b6-741b015a435a",
+    "Name": "Torch",
+    "Position": "0,0,0",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "AdvancedLight",
+        "__enabled": true,
+        "BaseColor": "0.87624,0.73439,0.40342,1",
+        "CastShadows": true,
+        "ConstantAttenuation": 0,
+        "FlickerScale": 0.35,
+        "FlickerSpeed": 5,
+        "LinearAttenuation": 0,
+        "QuadraticAttenuation": 0.74,
+        "Radius": 1000
+      },
+      {
+        "__type": "PositionJitter",
+        "__enabled": true,
+        "XFactor": 2,
+        "XSpeed": 50,
+        "YFactor": 2,
+        "YSpeed": 50,
+        "ZFactor": 2,
+        "ZSpeed": 50
+      },
+      {
+        "__type": "SoundPointComponent",
+        "__enabled": true,
+        "Force2d": false,
+        "MaxRepeatTime": 1,
+        "MinRepeatTime": 1,
+        "Pitch": 1,
+        "PlayOnStart": true,
+        "Repeat": false,
+        "SoundEvent": "sfx/torch/fire_loop.sound",
+        "SoundOverride": false,
+        "StopOnNew": false,
+        "Volume": 1
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

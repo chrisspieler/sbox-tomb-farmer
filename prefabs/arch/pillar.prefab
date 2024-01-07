@@ -1,0 +1,71 @@
+{
+  "RootObject": {
+    "Id": "b37e68d9-110c-44f5-80b2-076863fe17ab",
+    "Name": "Pillar",
+    "Position": "384,224,-0.0000007578958",
+    "Enabled": true,
+    "Children": [
+      {
+        "Id": "9205f241-dd3a-4358-b483-ef11bbec8b1c",
+        "Name": "untitled_27",
+        "Position": "0,0,222.3828",
+        "Scale": "1,1,1.342902",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "model/model/untitled_27.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Model": "model/model/untitled_27.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "989fb2ae-a8d5-47bc-880e-32e483eaffc9",
+        "Name": "untitled_27 (1)",
+        "Position": "0,0,222.3828",
+        "Rotation": "1,0,0,-0.0000006397578",
+        "Scale": "1,1,1.342901",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "model/model/untitled_27.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Model": "model/model/untitled_27.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "tesssssssssst.untitled_418721"
+  ]
+}

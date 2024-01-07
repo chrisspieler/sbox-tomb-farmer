@@ -1,0 +1,1171 @@
+{
+  "Id": "7ffd5ffd-5c99-42aa-b9fd-6f34721a29af",
+  "GameObjects": [
+    {
+      "Id": "d98b39b3-f920-484a-92c7-323ddb3dbfe5",
+      "Name": "Screen",
+      "Position": "149.9949,149.995,-212.125",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__enabled": true,
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "MainMenuPanel",
+          "__enabled": true,
+          "GameTitle": "Dead Wringer"
+        }
+      ]
+    },
+    {
+      "Id": "b181c8c4-5b0f-4653-b7ec-215279e0f232",
+      "Name": "Camera",
+      "Position": "0,0,72",
+      "Rotation": "0.00000000531079,-0.08910029,0.000000000000000896736,0.9960227",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0,0,0,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "Id": "50f1eaed-f8d0-4eec-b78b-3a02a65443b8",
+      "Name": "2D Skybox",
+      "Position": "107.3451,-22.24457,66.02104",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "__enabled": true,
+          "SkyMaterial": "raw/starmapmilkyway.vmat",
+          "Tint": "0,0,0,1"
+        },
+        {
+          "__type": "SkyFlicker",
+          "__enabled": true,
+          "HighTint": "0.01176,0.01176,0.01176,1",
+          "Sky": "50f1eaed-f8d0-4eec-b78b-3a02a65443b8",
+          "Speed": 3
+        }
+      ]
+    },
+    {
+      "Id": "62144f6a-263a-4e6b-ab58-7771677e6090",
+      "Name": "Light Probe",
+      "Position": "200,0,72",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "EnvmapProbe",
+          "__enabled": true,
+          "Bounds": {
+            "Mins": "-250,-512,-72",
+            "Maxs": "500,512,200"
+          },
+          "Feathering": 0.02,
+          "Projection": "Sphere",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "9379e02b-bc86-4b65-a624-c68c7478abae",
+      "Name": "Torch",
+      "Position": "136,0,32",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "4bdb5a35-b031-4bd5-84b7-e5077bf7d649",
+          "Name": "Torch",
+          "Position": "29.79922,0,0",
+          "Tags": "player",
+          "Enabled": true,
+          "__Prefab": "prefabs/fx/torch_light.prefab"
+        }
+      ]
+    },
+    {
+      "Id": "3124cc0d-6f91-4eb7-8f20-e0cf35ef10ba",
+      "Name": "Floor",
+      "Enabled": true,
+      "Children": [
+        {
+          "Id": "c426fbcc-56b1-4cce-9c1b-4363f2d1c34d",
+          "Name": "Plane (1)",
+          "Position": "376,0,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "93fbff32-036f-4085-9295-a0686c18fb78",
+          "Name": "Plane (18)",
+          "Position": "248,0,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "a92ea93e-a5d9-4afb-a53b-584ec748894f",
+          "Name": "Plane (22)",
+          "Position": "120,0,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "4bb5272c-a7d9-4bb4-9b17-372f9568816e",
+          "Name": "Plane (6)",
+          "Position": "504,0,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "86cfd630-1603-4087-951e-e0eef8191e24",
+          "Name": "Plane (11)",
+          "Position": "632,0,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "f9f85f4c-6067-4cb8-9d2d-e63f70deb07e",
+          "Name": "Plane (11)",
+          "Position": "1192,0,0",
+          "Scale": "10,10,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "edf07b37-0626-443a-89fb-f6c9518a483a",
+          "Name": "Plane (11)",
+          "Position": "1192,-976,0",
+          "Scale": "10,10,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "5bbe3023-63ca-475f-a89f-f8f7849fc542",
+          "Name": "Plane (11)",
+          "Position": "1192,984,0",
+          "Scale": "10,10,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "711c5c69-d314-47ca-8042-21c7919fef47",
+          "Name": "Plane (11)",
+          "Position": "232,816,0",
+          "Scale": "10,10,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "3318bbbb-d041-403d-927b-eba41eac4173",
+          "Name": "Plane (11)",
+          "Position": "232,-808,0",
+          "Scale": "10,10,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "b70b1158-975d-4797-b399-c0f714715598",
+          "Name": "Plane (2)",
+          "Position": "376,128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "58abd768-453b-479f-8ce2-d7fddb5895db",
+          "Name": "Plane (17)",
+          "Position": "248,128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "8f36215c-e86c-44b1-8a1c-e8424b444c7b",
+          "Name": "Plane (21)",
+          "Position": "120,128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "30e3f992-5bb7-40f1-bda0-bb60f9ed55b9",
+          "Name": "Plane (7)",
+          "Position": "504,128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "69556001-5bb7-46d0-b8c6-1668054974b1",
+          "Name": "Plane (12)",
+          "Position": "632,128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "75536bfc-f3f9-4a99-898d-ce5fb2e31de9",
+          "Name": "Plane (3)",
+          "Position": "376,256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "d2ad5f7a-7a24-4748-a567-8479802dec69",
+          "Name": "Plane (16)",
+          "Position": "248,256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "baf69dd9-47a7-46fb-8c74-92d1b145cd1c",
+          "Name": "Plane (8)",
+          "Position": "504,256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "908fa292-8e3c-436c-b3cf-586f4f6ee3b5",
+          "Name": "Plane (13)",
+          "Position": "632,256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "44b74153-86dd-4da5-bfb0-c535898bd7d4",
+          "Name": "Plane (4)",
+          "Position": "376,-128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "f49a1194-8710-4aad-8119-7e30768e21b3",
+          "Name": "Plane (19)",
+          "Position": "248,-128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "e422ba60-5569-4e14-8c4a-694c1a46fcd1",
+          "Name": "Plane (23)",
+          "Position": "120,-128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "ae5a5087-c3de-4cda-a5b5-f343d3c00cfb",
+          "Name": "Plane (9)",
+          "Position": "504,-128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "9b2f85dc-7e67-4fea-9823-80985c719759",
+          "Name": "Plane (14)",
+          "Position": "632,-128,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "db57d051-2a1f-497a-ad7a-68ae3faecb1a",
+          "Name": "Plane (5)",
+          "Position": "376,-256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "b4e1dbe2-b329-446b-96c3-15f5b4750320",
+          "Name": "Plane (20)",
+          "Position": "248,-256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "19188860-e0aa-4a88-ba4c-dbef52535839",
+          "Name": "Plane (10)",
+          "Position": "504,-256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        },
+        {
+          "Id": "cdd9482a-0aa7-403c-b4df-1ef50e1b670d",
+          "Name": "Plane (15)",
+          "Position": "632,-256,0",
+          "Scale": "1.28,1.28,1",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__enabled": true,
+              "BodyGroups": 18446744073709551615,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/stonewall_b/stonewall_b.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "BoxCollider",
+              "__enabled": true,
+              "Center": "0,0,-0.125",
+              "IsTrigger": false,
+              "Scale": "100,100,0.25",
+              "Static": false,
+              "Surface": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "7fc31f8a-d587-4a68-85b8-6f224ddad730",
+      "Name": "dirt_pile_03",
+      "Position": "248.3201,-188.8677,0.00003578018",
+      "Scale": "1.69392,1.583022,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/props/dirt_pile/dirt_pile_03.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "11558eab-abee-445f-8e13-fc5be3946d63",
+      "Name": "dirt_pile_02",
+      "Position": "400.5327,335.6876,0.0000086031",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/props/dirt_pile/dirt_pile_02.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "f7cbe677-fc86-448b-9707-2925e93422a6",
+      "Name": "brick_pile_3x6",
+      "Position": "448,320,-0.000007426865",
+      "Rotation": "-0.0000000433869,-0.00000000000001958977,-0.7279112,0.6856715",
+      "Scale": "1,1.293844,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/rust_props/rubble_piles/brick_pile_3x6.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/rust_props/rubble_piles/brick_pile_3x6.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "b0357765-804f-43e1-89e3-5187e82f9b80",
+      "Name": "brick_pile_6x6",
+      "Position": "372.3089,-340.7331,-0.00002452899",
+      "Rotation": "-0.00000004918416,-0.000000000000001318541,-0.8251731,0.5648809",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/rust_props/rubble_piles/brick_pile_6x6.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/rust_props/rubble_piles/brick_pile_6x6.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "b9706638-dc06-493f-9b26-57f9ae1110db",
+      "Name": "brick_pile_6x6 (1)",
+      "Position": "561.4868,-385.6057,-0.00003897774",
+      "Rotation": "-0.00000005565601,-0.00000000000001444589,-0.9337529,-0.3579189",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/rust_props/rubble_piles/brick_pile_6x6.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/rust_props/rubble_piles/brick_pile_6x6.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "7beea533-d56d-4db6-9de7-035ac663ff82",
+      "Name": "brick_pile_1x6",
+      "Position": "927.121,1.7654,-0.0005969084",
+      "Rotation": "0.0000004167366,-0.00000001743181,0.9988115,-0.04874333",
+      "Scale": "1,2.292001,1",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/rust_props/rubble_piles/brick_pile_1x6.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "__enabled": true,
+          "IsTrigger": false,
+          "Model": "models/rust_props/rubble_piles/brick_pile_1x6.vmdl",
+          "Static": false,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "1754a0e5-5946-4ef7-9eaa-a49c8d4d4214",
+      "Name": "dirt_pile_01",
+      "Position": "209.5957,-119.6396,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": true,
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/props/dirt_pile/dirt_pile_01.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "Id": "b37e68d9-110c-44f5-80b2-076863fe17ab",
+      "Name": "Pillar",
+      "Position": "384,224,-0.0000007578958",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "f0821f38-38ad-47b5-a74c-bd7fea4bbf65",
+      "Name": "Pillar (6)",
+      "Position": "384,224,448",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "04ec7fc7-3cf3-46fa-8704-2fe233113ff8",
+      "Name": "Pillar (5)",
+      "Position": "384,-256,-0.0000007578958",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "b02bb54a-2954-48c6-a034-c65e489155d2",
+      "Name": "Pillar (7)",
+      "Position": "384,-256,448",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "f2012e7f-f584-4599-bf78-ffb62b8399f1",
+      "Name": "Pillar (1)",
+      "Position": "608,224,-0.0000007578958",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "d39e133f-82e3-4c8f-8384-e4d8a5231f82",
+      "Name": "Pillar (8)",
+      "Position": "608,224,448",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "3b8968ea-1a2f-47dc-9996-c4d1380301f9",
+      "Name": "Pillar (4)",
+      "Position": "608,-256,-0.0000007578958",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "5adf8551-5b83-4456-86e3-bb071063000d",
+      "Name": "Pillar (9)",
+      "Position": "608,-256,448",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "916d43a5-48a2-42e1-b71c-fb3b7928f486",
+      "Name": "Pillar (2)",
+      "Position": "832,224,-0.0000007578958",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "9fb9b344-a358-43d9-b3b8-d3d839e33d6d",
+      "Name": "Pillar (10)",
+      "Position": "832,224,448",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "7df2e8c2-1404-461d-bee0-dd14f116e3e0",
+      "Name": "Pillar (3)",
+      "Position": "832,-256,-0.0000007578958",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    },
+    {
+      "Id": "ad781e5d-cd63-4c7d-872c-1c0e1053ecb0",
+      "Name": "Pillar (11)",
+      "Position": "832,-256,448",
+      "Enabled": true,
+      "__Prefab": "prefabs/arch/pillar.prefab"
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "main_menu",
+  "Description": "",
+  "__references": [
+    "dopamine.starmapmilkyway",
+    "facepunch.dirtpile_01",
+    "facepunch.dirtpile_02",
+    "facepunch.dirtpile_03",
+    "rust.brick_pile_1x6",
+    "rust.brick_pile_3x6",
+    "rust.brick_pile_6x6",
+    "rustextended.stonewall_b"
+  ]
+}

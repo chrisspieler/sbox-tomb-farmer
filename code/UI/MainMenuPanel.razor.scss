@@ -1,0 +1,57 @@
+MainMenuPanel {
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	color: white;
+	pointer-events: all;
+
+	.title {
+		position: absolute;
+		top: 33%;
+		left: 50%;
+		transform: translate( -50%, -33% );
+		font-size: 156px;
+		font-family: 'Chalk Line Outline';
+		transition: opacity 4s;
+		opacity: 1;
+
+		&:intro {
+			opacity: 0;
+		}
+	}
+
+	#choices {
+		flex-direction: column;
+		justify-content: space-evenly;
+		font-family: 'Quaaykop';
+		height: 40%;
+		width: 30%;
+		margin-bottom: 5%;
+		transition: opacity 2s;
+		opacity: 1;
+
+		&:intro {
+			opacity: 0;
+		}
+
+		.choice {
+			font-size: 44px;
+			justify-content: center;
+			width: auto;
+			padding: 10px;
+			border-width: 2px;
+			border-color: #FFF0;
+
+
+			&:hover {
+				background-color: #FFF3;
+				border-width: 2px;
+				border-color: #FFF5;
+				mask-image: url('ui/graphics/option-fade-mask.png');
+				mask-size: cover;
+			}
+		}
+	}
+}
