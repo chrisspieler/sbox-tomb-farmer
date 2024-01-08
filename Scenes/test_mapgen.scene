@@ -29,10 +29,15 @@
         {
           "__type": "MapGenerator",
           "__enabled": true,
-          "CellModel": "models/block/0w.vmdl",
-          "MaxCellCount": 5,
+          "Cell1Way": "models/block/1w.vmdl",
+          "Cell2Way": "models/block/2w.vmdl",
+          "Cell3Way": "models/block/3w.vmdl",
+          "Cell4Way": "models/block/4w.vmdl",
+          "CellCorner": "models/block/2w_c.vmdl",
+          "CellModel": "models/block/2w.vmdl",
+          "MaxCellCount": 100,
           "PlayerPrefab": "prefabs/player/player.prefab",
-          "VisualizeDelay": 0.2
+          "VisualizeDelay": 0.1
         }
       ]
     },
