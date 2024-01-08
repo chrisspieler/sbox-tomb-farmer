@@ -19,7 +19,7 @@
           "__type": "MainMenuPanel",
           "__enabled": true,
           "Camera": "b181c8c4-5b0f-4653-b7ec-215279e0f232",
-          "GameScene": "scenes/main_test.scene",
+          "GameScene": "scenes/test_mapgen.scene",
           "GameStarted": false,
           "GameTitle": "Dead Wringer"
         }
