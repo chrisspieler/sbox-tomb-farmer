@@ -34,10 +34,12 @@
           "Cell3Way": "models/block/3w.vmdl",
           "Cell4Way": "models/block/4w.vmdl",
           "CellCorner": "models/block/2w_c.vmdl",
-          "CellModel": "models/block/2w.vmdl",
-          "MaxCellCount": 100,
+          "CellModel": "models/block/0w.vmdl",
+          "MaxCellCount": 50,
+          "Pillar": "models/arch/pillar_16.vmdl",
           "PlayerPrefab": "prefabs/player/player.prefab",
-          "VisualizeDelay": 0.1
+          "Visualize": true,
+          "VisualizeDelay": 0.01
         }
       ]
     },
