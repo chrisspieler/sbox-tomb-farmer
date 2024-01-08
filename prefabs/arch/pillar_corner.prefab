@@ -1,0 +1,42 @@
+{
+  "RootObject": {
+    "Id": "cc959103-aaf4-443d-9651-e8c67ffd4b37",
+    "Name": "Pillar Corner",
+    "Enabled": true,
+    "Children": [
+      {
+        "Id": "d9a82ebc-0d9e-411a-a52b-2a606f0801b9",
+        "Name": "untitled_27 (1)",
+        "Position": "0,0.0002798971,0",
+        "Scale": "0.4,0.4,1",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "model/model/untitled_27.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Model": "model/model/untitled_27.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "tesssssssssst.untitled_418721"
+  ]
+}

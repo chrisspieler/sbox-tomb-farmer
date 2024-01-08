@@ -1,0 +1,80 @@
+{
+  "RootObject": {
+    "Id": "fee79667-10b0-4900-8ce2-2874d1927523",
+    "Name": "Room 128",
+    "Enabled": true,
+    "Children": [
+      {
+        "Id": "afdbf892-3c89-45f3-9dbc-e4161884c33c",
+        "Name": "Placeholder",
+        "Position": "-64,64,0",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/block/0w.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__enabled": true,
+            "IsTrigger": false,
+            "Model": "models/block/0w.vmdl",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "aba79ae6-f15e-4318-ae87-dec34365ecb2",
+        "Name": "Floor",
+        "Tags": "floor",
+        "Enabled": true
+      },
+      {
+        "Id": "d8a84280-4a6b-4c7e-baac-b82769f012b8",
+        "Name": "Ceiling",
+        "Position": "0,0,120",
+        "Tags": "ceiling",
+        "Enabled": true
+      },
+      {
+        "Id": "43339929-b049-4cd3-9125-2fb0bd880a89",
+        "Name": "Wall N",
+        "Position": "60,0,0",
+        "Tags": "wall,north",
+        "Enabled": true
+      },
+      {
+        "Id": "3821882a-758e-47c0-91aa-5bae953ab7c5",
+        "Name": "Wall E",
+        "Position": "0,-60,0",
+        "Tags": "wall,east",
+        "Enabled": true
+      },
+      {
+        "Id": "543a876a-6e2d-404a-bcb8-81c536d8af1b",
+        "Name": "Wall S",
+        "Position": "-60,0,0",
+        "Tags": "wall,south",
+        "Enabled": true
+      },
+      {
+        "Id": "83b17b5a-c3f6-49a4-9204-55c63fd6de99",
+        "Name": "Wall W",
+        "Position": "0,60,0",
+        "Tags": "wall,west",
+        "Enabled": true
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

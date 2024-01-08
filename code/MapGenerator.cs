@@ -14,7 +14,7 @@ public sealed class MapGenerator : Component
 	[Property] public Model CellCorner { get; set; }
 	[Property] public Model Cell3Way { get; set; }
 	[Property] public Model Cell4Way { get; set; }
-	[Property] public Model Pillar { get; set; }
+	[Property] public GameObject PillarPrefab { get; set; }
 	[Property] public float VisualizeDelay { get; set; } = 0.5f;
 	[Property] public GameObject PlayerPrefab { get; set; }
 	[Property] public bool Visualize { get; set; } = false;
@@ -364,13 +364,11 @@ public sealed class MapGenerator : Component
 
 		GameObject CreatePillar( Vector3 position, GameObject parent )
 		{
-			var go = new GameObject( true, "Pillar" );
+			var go = SceneUtility.Instantiate( PillarPrefab );
+			go.BreakFromPrefab();
+			go.Name = "Pillar";
 			go.Parent = parent;
 			go.Transform.Position = position;
-			var renderer = go.Components.Create<ModelRenderer>();
-			renderer.Model = Pillar;
-			var collider = go.Components.Create<ModelCollider>();
-			collider.Model = Pillar;
 			return go;
 		}
 	}
