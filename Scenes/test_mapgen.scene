@@ -35,11 +35,11 @@
           "Cell4Way": "models/block/4w.vmdl",
           "CellCorner": "models/block/2w_c.vmdl",
           "CellModel": "models/block/0w.vmdl",
-          "MaxCellCount": 50,
+          "MaxCellCount": 250,
           "Pillar": "models/arch/pillar_16.vmdl",
           "PlayerPrefab": "prefabs/player/player.prefab",
           "Visualize": true,
-          "VisualizeDelay": 0.01
+          "VisualizeDelay": 0.02
         }
       ]
     },

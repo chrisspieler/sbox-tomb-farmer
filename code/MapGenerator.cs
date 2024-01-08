@@ -21,6 +21,10 @@ public sealed class MapGenerator : Component
 
 	public const float CELL_SIZE = 128f;
 
+	private CameraComponent _camera;
+	private Rotation _cameraTargetRotation;
+	private float _cameraTargetFov = 60f;
+
 	private Dictionary<Vector3Int, GameObject> _cells = new();
 
 	protected override void OnStart()
@@ -28,34 +32,43 @@ public sealed class MapGenerator : Component
 		RunGeneration();
 	}
 
+	protected override void OnUpdate()
+	{
+		if ( _camera.IsValid() && Visualize )
+		{
+			_camera.Transform.Rotation = Rotation.Slerp( _camera.Transform.Rotation, _cameraTargetRotation, Time.Delta * 3f );
+			_camera.FieldOfView = _camera.FieldOfView.LerpTo( _cameraTargetFov, Time.Delta * 2f );
+		}
+	}
+
 	public async void RunGeneration()
 	{
 		var light = Scene.GetAllComponents<DirectionalLight>().FirstOrDefault();
-		var camera = Components.Get<CameraComponent>();
+		_camera = Components.Get<CameraComponent>();
 		foreach(var cell in GenerateCells() )
 		{
 			if ( Visualize )
 			{
-				await VisualizeObject( cell, camera );
+				await VisualizeObject( cell, _camera );
 			}
 		}
 		foreach( var cell in AutotileCells() )
 		{
 			if ( Visualize )
 			{
-				await VisualizeObject( cell, camera );
+				await VisualizeObject( cell, _camera );
 			}
 		}
 		foreach( var pillar in CreatePillars() )
 		{
 			if ( Visualize )
 			{
-				await VisualizeObject( pillar, camera );
+				await VisualizeObject( pillar, _camera );
 			}
 		}
 
 		if ( light.IsValid() ) light.Enabled = false;
-		if ( camera.IsValid() ) camera.Enabled = false;
+		if ( _camera.IsValid() ) _camera.Enabled = false;
 
 		var spawnPos = _cells.First().Value.Transform.Position + new Vector3( 0, 0, 0 );
 		var player = SceneUtility.Instantiate( PlayerPrefab, spawnPos );
@@ -65,7 +78,10 @@ public sealed class MapGenerator : Component
 	{
 		if ( camera.IsValid() )
 		{
-			camera.Transform.Rotation = Rotation.LookAt( go.Transform.Position - camera.Transform.Position );
+
+			_cameraTargetRotation = Rotation.LookAt( go.Transform.Position - camera.Transform.Position );
+			var distance = go.Transform.Position.Distance( camera.Transform.Position );
+			_cameraTargetFov = MathX.Remap( distance, 500f, 5000f, 90f, 20f );
 		}
 		_ = FlashTint( go, VisualizeDelay * 4f, Color.Cyan );
 		await Task.DelaySeconds( VisualizeDelay );
